@@ -1,9 +1,9 @@
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\bin\Debug\P3 Code.exe.config
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\bin\Debug\P3 Code.exe
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\bin\Debug\P3 Code.pdb
-C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.csprojAssemblyReference.cache
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3_Code.Properties.Resources.resources
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.GenerateResource.cache
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.CoreCompileInputs.cache
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.exe
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.pdb
+C:\Users\reale\Desktop\SCHOOL\Software Engineering\P3\repo\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.AssemblyReference.cache

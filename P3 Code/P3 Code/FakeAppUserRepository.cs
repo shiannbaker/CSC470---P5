@@ -40,7 +40,9 @@ namespace P3_Code
         public bool Login(string UserName, string Password)
         {
             AppUser user;
-            if (AppUsers.TryGetValue(UserName, out user) && AppUsers.TryGetValue(Password, out user)) //username and password match
+            AppUsers.TryGetValue(UserName, out user);
+
+            if (user.UserName == UserName && user.Password == Password) //username and password match
             {
                 SetAuthentication(UserName, true);
                 return true;
