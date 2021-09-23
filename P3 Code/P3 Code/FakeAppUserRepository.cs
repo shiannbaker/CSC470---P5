@@ -10,13 +10,13 @@ namespace P3_Code
     {
         private static Dictionary<string, AppUser> AppUsers;
 
-        public FakeAppUserRepository()
+        public FakeAppUserRepository() //i set the usernames to be the key values
         {
             if (AppUsers == null)
             {
                 AppUsers = new Dictionary<string, AppUser>();
                 //add some
-                AppUsers.Add( "one" , new AppUser
+                AppUsers.Add( "BobbyJ" , new AppUser
                 {
                     UserName = "BobbyJ",
                     Password = "hi24",
@@ -25,7 +25,7 @@ namespace P3_Code
                     EmailAddress = "bobjohn@email.com",
                     isAuthenticated = true
                 });
-                AppUsers.Add("two", new AppUser
+                AppUsers.Add("PaulC", new AppUser
                 {
                     UserName = "PaulC",
                     Password = "password",
@@ -39,23 +39,40 @@ namespace P3_Code
 
         public bool Login(string UserName, string Password)
         {
-            //return answer
-            
+            AppUser user;
+            if (AppUsers.TryGetValue(UserName, out user) && AppUsers.TryGetValue(Password, out user)) //username and password match
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public List<AppUser> GetAll()
         {
             //return all
+            List<AppUser> users = new List<AppUser>();
+            foreach (KeyValuePair<string, AppUser> user in AppUsers)
+            {
+                users.Add(user.Value);
+            }
+            return users;
         }
 
         public void SetAuthentication(string UserName, bool IsAuthenticated)
         {
             //set authentication
+            
         }
 
         public AppUser GetByUserName(string UserName)
         {
             //return result
+            AppUser user;
+            bool ignore = AppUsers.TryGetValue(UserName, out user);
+            return user;
         }
     }
 }
