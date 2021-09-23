@@ -16,14 +16,14 @@ namespace P3_Code
             {
                 AppUsers = new Dictionary<string, AppUser>();
                 //add some
-                AppUsers.Add( "BobbyJ" , new AppUser
+                AppUsers.Add("BobbyJ", new AppUser
                 {
                     UserName = "BobbyJ",
                     Password = "hi24",
                     FirstName = "Bob",
                     LastName = "John",
                     EmailAddress = "bobjohn@email.com",
-                    isAuthenticated = true
+                    isAuthenticated = false
                 });
                 AppUsers.Add("PaulC", new AppUser
                 {
@@ -32,7 +32,7 @@ namespace P3_Code
                     FirstName = "Paul",
                     LastName = "Carson",
                     EmailAddress = "paulcarson@email.com",
-                    isAuthenticated = true
+                    isAuthenticated = false
                 });
             }
         }
@@ -42,10 +42,12 @@ namespace P3_Code
             AppUser user;
             if (AppUsers.TryGetValue(UserName, out user) && AppUsers.TryGetValue(Password, out user)) //username and password match
             {
+                SetAuthentication(UserName, true);
                 return true;
             }
             else
             {
+                SetAuthentication(UserName, false);
                 return false;
             }
         }
@@ -64,7 +66,12 @@ namespace P3_Code
         public void SetAuthentication(string UserName, bool IsAuthenticated)
         {
             //set authentication
-            
+
+            AppUser user;
+            if (AppUsers.TryGetValue(UserName, out user) == true)
+            {
+                user.isAuthenticated = IsAuthenticated;
+            }
         }
 
         public AppUser GetByUserName(string UserName)
