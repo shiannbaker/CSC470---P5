@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Code
 {
-    public partial class LoginForm : Form
+    public partial class FormLogin : Form
     {
-        public LoginForm()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -47,6 +47,7 @@ namespace P3_Code
             }
             else //result == true and window from should appear
             {
+                
                 this.Close();
             }
 

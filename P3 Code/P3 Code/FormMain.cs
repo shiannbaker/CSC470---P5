@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace P3_Code
 {
-    public partial class MainForm : Form
+    public partial class FormMain : Form
     {
-        public MainForm()
+        // Variable to store out current user data
+        public AppUser currentUser;
+
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -24,7 +27,7 @@ namespace P3_Code
 
             AppUser currentUser = new AppUser();
 
-            LoginForm loginPrompt = new LoginForm();
+            FormLogin loginPrompt = new FormLogin();
 
             while (!currentUser.isAuthenticated)
             {

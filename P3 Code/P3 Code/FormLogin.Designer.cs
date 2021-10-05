@@ -1,7 +1,7 @@
 ﻿
 namespace P3_Code
 {
-    partial class LoginForm
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
