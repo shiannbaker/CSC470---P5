@@ -35,6 +35,22 @@ namespace P3_Code
             this.requirementsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.designsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selectProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeProjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countByAssigneeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listByAssigneeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countByArtifactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listByArtifactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countByDateRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listByDateRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trendByDateRangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,12 +71,23 @@ namespace P3_Code
             // 
             // preferencesToolStripMenuItem
             // 
+            this.preferencesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.selectProjectToolStripMenuItem,
+            this.createProjectToolStripMenuItem,
+            this.modifyProjectToolStripMenuItem,
+            this.removeProjectToolStripMenuItem});
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
             this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
             this.preferencesToolStripMenuItem.Text = "Preferences";
             // 
             // issuesToolStripMenuItem
             // 
+            this.issuesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem,
+            this.recordToolStripMenuItem,
+            this.removeToolStripMenuItem,
+            this.modifyToolStripMenuItem,
+            this.reportToolStripMenuItem});
             this.issuesToolStripMenuItem.Name = "issuesToolStripMenuItem";
             this.issuesToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.issuesToolStripMenuItem.Text = "Issues";
@@ -83,6 +110,110 @@ namespace P3_Code
             this.testsToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.testsToolStripMenuItem.Text = "Tests";
             // 
+            // selectProjectToolStripMenuItem
+            // 
+            this.selectProjectToolStripMenuItem.Name = "selectProjectToolStripMenuItem";
+            this.selectProjectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.selectProjectToolStripMenuItem.Text = "Select Project";
+            // 
+            // createProjectToolStripMenuItem
+            // 
+            this.createProjectToolStripMenuItem.Name = "createProjectToolStripMenuItem";
+            this.createProjectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.createProjectToolStripMenuItem.Text = "Create Project";
+            // 
+            // modifyProjectToolStripMenuItem
+            // 
+            this.modifyProjectToolStripMenuItem.Name = "modifyProjectToolStripMenuItem";
+            this.modifyProjectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modifyProjectToolStripMenuItem.Text = "Modify Project";
+            // 
+            // removeProjectToolStripMenuItem
+            // 
+            this.removeProjectToolStripMenuItem.Name = "removeProjectToolStripMenuItem";
+            this.removeProjectToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.removeProjectToolStripMenuItem.Text = "Remove Project";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
+            // recordToolStripMenuItem
+            // 
+            this.recordToolStripMenuItem.Name = "recordToolStripMenuItem";
+            this.recordToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.recordToolStripMenuItem.Text = "Record";
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.removeToolStripMenuItem.Text = "Modify";
+            // 
+            // modifyToolStripMenuItem
+            // 
+            this.modifyToolStripMenuItem.Name = "modifyToolStripMenuItem";
+            this.modifyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modifyToolStripMenuItem.Text = "Remove";
+            // 
+            // reportToolStripMenuItem
+            // 
+            this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.countByAssigneeToolStripMenuItem,
+            this.listByAssigneeToolStripMenuItem,
+            this.countByArtifactToolStripMenuItem,
+            this.listByArtifactToolStripMenuItem,
+            this.countByDateRangeToolStripMenuItem,
+            this.listByDateRangeToolStripMenuItem,
+            this.trendByDateRangeToolStripMenuItem});
+            this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
+            this.reportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportToolStripMenuItem.Text = "Report";
+            // 
+            // countByAssigneeToolStripMenuItem
+            // 
+            this.countByAssigneeToolStripMenuItem.Name = "countByAssigneeToolStripMenuItem";
+            this.countByAssigneeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.countByAssigneeToolStripMenuItem.Text = "Count by Assignee";
+            // 
+            // listByAssigneeToolStripMenuItem
+            // 
+            this.listByAssigneeToolStripMenuItem.Name = "listByAssigneeToolStripMenuItem";
+            this.listByAssigneeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listByAssigneeToolStripMenuItem.Text = "List by Assignee";
+            // 
+            // countByArtifactToolStripMenuItem
+            // 
+            this.countByArtifactToolStripMenuItem.Name = "countByArtifactToolStripMenuItem";
+            this.countByArtifactToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.countByArtifactToolStripMenuItem.Text = "Count by Artifact";
+            // 
+            // listByArtifactToolStripMenuItem
+            // 
+            this.listByArtifactToolStripMenuItem.Name = "listByArtifactToolStripMenuItem";
+            this.listByArtifactToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.listByArtifactToolStripMenuItem.Text = "List by Artifact";
+            // 
+            // countByDateRangeToolStripMenuItem
+            // 
+            this.countByDateRangeToolStripMenuItem.Name = "countByDateRangeToolStripMenuItem";
+            this.countByDateRangeToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.countByDateRangeToolStripMenuItem.Text = "Count by Date Range";
+            // 
+            // listByDateRangeToolStripMenuItem
+            // 
+            this.listByDateRangeToolStripMenuItem.Name = "listByDateRangeToolStripMenuItem";
+            this.listByDateRangeToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.listByDateRangeToolStripMenuItem.Text = "List by Date Range";
+            // 
+            // trendByDateRangeToolStripMenuItem
+            // 
+            this.trendByDateRangeToolStripMenuItem.Name = "trendByDateRangeToolStripMenuItem";
+            this.trendByDateRangeToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.trendByDateRangeToolStripMenuItem.Text = "Trend by Date Range";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -92,6 +223,7 @@ namespace P3_Code
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -107,5 +239,21 @@ namespace P3_Code
         private System.Windows.Forms.ToolStripMenuItem requirementsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem designsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifyProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeProjectToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem countByAssigneeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listByAssigneeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem countByArtifactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listByArtifactToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem countByDateRangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listByDateRangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem trendByDateRangeToolStripMenuItem;
     }
 }

@@ -16,5 +16,20 @@ namespace P3_Code
         {
             InitializeComponent();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
+            this.Hide();
+
+            AppUser currentUser = new AppUser();
+
+            LoginForm loginPrompt = new LoginForm();
+
+            while (!currentUser.isAuthenticated)
+            {
+                loginPrompt.ShowDialog();
+            }
+        }
     }
 }

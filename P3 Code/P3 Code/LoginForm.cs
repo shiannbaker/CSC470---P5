@@ -17,15 +17,15 @@ namespace P3_Code
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
-            string UserName = textBox1.Text;
-            string Password = textBox2.Text;
+            string UserName = usernameBox.Text;
+            string Password = passwordBox.Text;
             bool result;
 
             //check to see if they match
@@ -40,22 +40,21 @@ namespace P3_Code
                 string title = "Close Window";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result2 = MessageBox.Show(message, title, buttons);
-                if (result2 == DialogResult.Yes)
-                {
-                    MainForm Form = new MainForm();
-                    Form.Show();
-                    this.Close();
-                }
-                else
+                if (result2 == DialogResult.No)
                 {
                     this.Close();
                 }
             }
             else //result == true and window from should appear
             {
-
+                this.Close();
             }
 
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.CenterToScreen();
         }
     }
 }
