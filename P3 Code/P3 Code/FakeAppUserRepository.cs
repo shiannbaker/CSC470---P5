@@ -42,14 +42,19 @@ namespace P3_Code
             AppUser user;
             AppUsers.TryGetValue(UserName, out user);
 
-            if (user.UserName == UserName && user.Password == Password) //username and password match
+            if (user != null && user.UserName == UserName && user.Password == Password) //username and password match
             {
                 SetAuthentication(UserName, true);
+
+                //call another function to open the new window
+
+
                 return true;
             }
             else
             {
                 SetAuthentication(UserName, false);
+
                 return false;
             }
         }
