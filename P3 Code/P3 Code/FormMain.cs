@@ -23,16 +23,35 @@ namespace P3_Code
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            this.Hide();
+            //this.Hide();
 
-            AppUser currentUser = new AppUser();
+            AppUser user = new AppUser();
 
             FormLogin loginPrompt = new FormLogin();
 
-            while (!currentUser.isAuthenticated)
+            DialogResult retryResult = DialogResult.OK;
+            do
             {
-                loginPrompt.ShowDialog();
+                retryResult = loginPrompt.ShowDialog();
+                user = loginPrompt._User;
+                if (user == null)
+                {
+                    user = new AppUser();
+                    user.isAuthenticated = false;
+                }
+
+            } while (!user.isAuthenticated && retryResult == DialogResult.OK);
+
+            if (retryResult != DialogResult.OK)
+            {
+                Console.Write("lol");
+                this.Close();
             }
+            else
+            {
+                this.Text = "Main - No Project Selected";
+            }
+            //this.Show();
         }
     }
 }

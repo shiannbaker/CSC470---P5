@@ -12,6 +12,7 @@ namespace P3_Code
 {
     public partial class FormLogin : Form
     {
+        public AppUser _User;
         public FormLogin()
         {
             InitializeComponent();
@@ -40,14 +41,24 @@ namespace P3_Code
                 string title = "Close Window";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result2 = MessageBox.Show(message, title, buttons);
+
+                _User = login.GetByUserName(UserName);  // Set the user so that the main form can see it
+
                 if (result2 == DialogResult.No)
                 {
                     this.Close();
                 }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                }
             }
             else //result == true and window from should appear
             {
-                
+
+                _User = login.GetByUserName(UserName);  // Set the user so that the main form can see it
+
+                DialogResult = DialogResult.OK; // Ensure the program doesn't exit
                 this.Close();
             }
 
