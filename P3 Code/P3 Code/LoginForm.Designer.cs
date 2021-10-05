@@ -1,7 +1,7 @@
 ﻿
 namespace P3_Code
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -39,26 +39,29 @@ namespace P3_Code
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 118);
+            this.textBox1.Location = new System.Drawing.Point(227, 99);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(256, 20);
+            this.textBox1.Size = new System.Drawing.Size(414, 22);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 220);
+            this.textBox2.Location = new System.Drawing.Point(227, 150);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(256, 20);
+            this.textBox2.Size = new System.Drawing.Size(414, 22);
             this.textBox2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(105, 116);
+            this.label1.Location = new System.Drawing.Point(76, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 20);
+            this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "User Name:";
             // 
@@ -66,18 +69,20 @@ namespace P3_Code
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(105, 220);
+            this.label2.Location = new System.Drawing.Point(88, 150);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 20);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(274, 290);
+            this.button1.Location = new System.Drawing.Point(320, 248);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 33);
+            this.button1.Size = new System.Drawing.Size(150, 41);
             this.button1.TabIndex = 4;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -86,27 +91,29 @@ namespace P3_Code
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(451, 290);
+            this.button2.Location = new System.Drawing.Point(500, 248);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 33);
+            this.button2.Size = new System.Drawing.Size(150, 41);
             this.button2.TabIndex = 5;
             this.button2.Text = "Login";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Form1
+            // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(655, 380);
+            this.ClientSize = new System.Drawing.Size(753, 361);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "LoginForm";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

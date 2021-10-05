@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Code
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -42,6 +42,8 @@ namespace P3_Code
                 DialogResult result2 = MessageBox.Show(message, title, buttons);
                 if (result2 == DialogResult.Yes)
                 {
+                    MainForm Form = new MainForm();
+                    Form.Show();
                     this.Close();
                 }
                 else
