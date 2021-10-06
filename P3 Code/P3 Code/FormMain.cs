@@ -23,35 +23,32 @@ namespace P3_Code
         private void MainForm_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
-            //this.Hide();
 
-            AppUser user = new AppUser();
-
+            AppUser user = new AppUser();   // Create a new user
             FormLogin loginPrompt = new FormLogin();
+            DialogResult loginResult = DialogResult.OK;
 
-            DialogResult retryResult = DialogResult.OK;
+            // Run loop until successful login or user exits the program
             do
             {
-                retryResult = loginPrompt.ShowDialog();
+                loginResult = loginPrompt.ShowDialog();
                 user = loginPrompt._User;
                 if (user == null)
                 {
                     user = new AppUser();
-                    user.isAuthenticated = false;
+                    user.isAuthenticated = false;   // If the user wasn't real, this keeps the loop going
                 }
 
-            } while (!user.isAuthenticated && retryResult == DialogResult.OK);
+            } while (!user.isAuthenticated && loginResult == DialogResult.OK);
 
-            if (retryResult != DialogResult.OK)
+            if (loginResult != DialogResult.OK)
             {
-                Console.Write("lol");
                 this.Close();
             }
             else
             {
                 this.Text = "Main - No Project Selected";
             }
-            //this.Show();
         }
     }
 }

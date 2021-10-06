@@ -50,7 +50,7 @@ namespace P3_Code
                 }
                 else
                 {
-                    this.DialogResult = DialogResult.OK;
+                    this.DialogResult = DialogResult.OK;        // Ensure the the loop continues and the login prompt is reset
                 }
             }
             else //result == true and window from should appear
