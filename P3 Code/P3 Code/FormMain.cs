@@ -50,7 +50,7 @@ namespace P3_Code
                 Project _project = new Project();
 
                 //showing second form
-                Select select = new Select();
+                FormSelect select = new FormSelect();
                 select.ShowDialog();
                 
 

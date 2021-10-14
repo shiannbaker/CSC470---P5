@@ -1,7 +1,7 @@
 ﻿
 namespace P3_Code
 {
-    partial class Select
+    partial class FormSelect
     {
         /// <summary>
         /// Required designer variable.

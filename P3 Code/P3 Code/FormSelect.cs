@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace P3_Code
 {
-    public partial class Select : Form
+    public partial class FormSelect : Form
     {
         public FakeProjectRepository project = new FakeProjectRepository();
-        public Select()
+        public FormSelect()
         {
             InitializeComponent();
         }
