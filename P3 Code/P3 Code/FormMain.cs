@@ -14,6 +14,7 @@ namespace P3_Code
     {
         // Variable to store out current user data
         public AppUser currentUser;
+        public Project currentProject;
 
         public FormMain()
         {
@@ -52,8 +53,8 @@ namespace P3_Code
                 //showing second form
                 FormSelect select = new FormSelect();
                 select.ShowDialog();
-                
 
+                this.Text = "Main - " + currentProject.Name;
 
                 //this.Text = "Main - No Project Selected";
             }

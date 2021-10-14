@@ -12,7 +12,7 @@ namespace P3_Code
 {
     public partial class FormSelect : Form
     {
-        public FakeProjectRepository project = new FakeProjectRepository();
+        public FakeProjectRepository projectRepo = new FakeProjectRepository();
         public FormSelect()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace P3_Code
 
 
             // show each project in the listBox
-            List<Project> projects = project.GetAll();
+            List<Project> projects = projectRepo.GetAll();
             foreach (Project i  in projects)
             {
                 listBox1.Items.Add(i.Id + " - " + i.Name);
@@ -56,6 +56,15 @@ namespace P3_Code
         {
             //select project
             //grab the name to display in MainForm
+            FormMain var = (FormMain)Application.OpenForms["FormMain"];
+            List<Project> projects = projectRepo.GetAll();
+
+            var.currentProject = projects.Find(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+
+            this.Close();
+
+            // How can I get the project out of the list using just a project name??
+
 
         }
 
