@@ -12,6 +12,7 @@ namespace P3_Code
 {
     public partial class Select : Form
     {
+        public FakeProjectRepository project = new FakeProjectRepository();
         public Select()
         {
             InitializeComponent();
@@ -19,20 +20,36 @@ namespace P3_Code
 
         private void Select_Load(object sender, EventArgs e)
         {
-            FakeProjectRepository project = new FakeProjectRepository();
+
+            this.CenterToScreen();
 
 
-            //print out each project
-            listBox1.Items.Add("");
+            // show each project in the listBox
+            List<Project> projects = project.GetAll();
+            foreach (Project i  in projects)
+            {
+                listBox1.Items.Add(i.Id + " - " + i.Name);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //form cancelled
-            this.Close();
 
-            FormMain var = (FormMain)Application.OpenForms["FormMain"];
-            var.Close();
+            //have the user try again
+            //show message that they should try again
+            string message = "A project must be selected.";
+            string title = "Attention";
+            MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+            DialogResult result2 = MessageBox.Show(message, title, buttons);
+
+            if (result2 == DialogResult.Cancel)
+            {
+                //form cancelled
+                this.Close();
+
+                FormMain var = (FormMain)Application.OpenForms["FormMain"];
+                var.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
