@@ -47,8 +47,25 @@ namespace P3_Code
             }
             else
             {
-                this.Text = "Main - No Project Selected";
+                Project _project = new Project();
+
+                //showing second form
+                Select select = new Select();
+                select.ShowDialog();
+
+                //if exit button hit exit completely
+                
+
+
+                //this.Text = "Main - No Project Selected";
             }
+        }
+
+        private void selectProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //store/change selected project
+
+
         }
     }
 }

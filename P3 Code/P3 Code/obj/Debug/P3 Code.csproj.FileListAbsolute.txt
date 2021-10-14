@@ -28,3 +28,15 @@ C:\Users\reale\Desktop\SCHOOL\Software Engineering\P4\repo\P3 Code\P3 Code\obj\D
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P4\repo\P3 Code\P3 Code\obj\Debug\P3 Code.pdb
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P4\repo\P3 Code\P3 Code\obj\Debug\P3_Code.FormLogin.resources
 C:\Users\reale\Desktop\SCHOOL\Software Engineering\P4\repo\P3 Code\P3 Code\obj\Debug\P3_Code.FormMain.resources
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\bin\Debug\P3 Code.exe.config
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\bin\Debug\P3 Code.exe
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\bin\Debug\P3 Code.pdb
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.AssemblyReference.cache
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3_Code.FormLogin.resources
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3_Code.FormMain.resources
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3_Code.Properties.Resources.resources
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.GenerateResource.cache
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3 Code.csproj.CoreCompileInputs.cache
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3 Code.exe
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3 Code.pdb
+C:\Users\DSU\Dropbox\My PC (R8600431)\Documents\DSU\Fall 2021\SoftwareEngineering\P4\P3 Code\P3 Code\obj\Debug\P3_Code.Select.resources

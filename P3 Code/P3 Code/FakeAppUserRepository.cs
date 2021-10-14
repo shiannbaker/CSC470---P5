@@ -46,9 +46,6 @@ namespace P3_Code
             {
                 SetAuthentication(UserName, true);
 
-                //call another function to open the new window
-
-
                 return true;
             }
             else

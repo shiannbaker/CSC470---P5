@@ -53,7 +53,7 @@ namespace P3_Code
                     this.DialogResult = DialogResult.OK;        // Ensure the the loop continues and the login prompt is reset
                 }
             }
-            else //result == true and window from should appear
+            else //result == true and window form should appear
             {
 
                 _User = login.GetByUserName(UserName);  // Set the user so that the main form can see it
