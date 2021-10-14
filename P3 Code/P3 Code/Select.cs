@@ -19,8 +19,11 @@ namespace P3_Code
 
         private void Select_Load(object sender, EventArgs e)
         {
-            FakeProjectRepository project = List<Project> GetAll();
-            listBox1.Items.Add();
+            FakeProjectRepository project = new FakeProjectRepository();
+
+
+            //print out each project
+            listBox1.Items.Add("");
         }
 
         private void button2_Click(object sender, EventArgs e)

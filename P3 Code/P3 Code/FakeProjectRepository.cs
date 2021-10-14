@@ -14,22 +14,20 @@ namespace P3_Code
         const string NO_PROJECT_FOUND_ERROR = "Project Not Found.";
         const string EMPTY_PROJECT_NAME_ERROR = "Empty Project Name.";
 
-        private static List<Project> projects = new List<Project>();
-
-        private static Dictionary<string, Project> project;
+        private static Dictionary<string, Project> projects;
 
         public FakeProjectRepository() //unique int vals as key
         {
-            if (project == null)
+            if (projects == null)
             {
-                project = new Dictionary<string, Project>();
+                projects = new Dictionary<string, Project>();
                 //add some
-                project.Add("One", new Project
+                projects.Add("One", new Project
                 {
                     Id = 1,
                     Name = "First Project",
                 });
-                project.Add("Two", new Project
+                projects.Add("Two", new Project
                 {
                     Id = 2,
                     Name = "Second Project",
@@ -44,35 +42,35 @@ namespace P3_Code
             return 0; //return id
         }
 
-        /*public string Add(Project project, int Id)
+        public string Add(Project project, int Id)
         {
-            
+            return "";
         }
 
         public string Remove(int projectId)
         {
-
+            return "";
         }
 
         public string Modify(int projectId, Project project)
         {
-
-        }*/
+            return "";
+        }
 
         public List<Project> GetAll()
         {
             //return all
-            List<Project> projects = new List<Project>();
+            List<Project> _projects = new List<Project>();
             foreach (KeyValuePair<string, Project> project in projects)
             {
-                projects.Add(project.Value);
+                _projects.Add(project.Value);
             }
-            return projects;
+            return _projects;
         }
 
-        /*public bool IsDuplicateName(string projectName)
+        public bool IsDuplicateName(string projectName)
         {
-
-        }*/
+            return false;
+        }
     }
 }

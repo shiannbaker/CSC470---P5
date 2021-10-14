@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace P3_Code
 {
-    class Project
+    public class Project
     {
         public int Id;
         public string Name;

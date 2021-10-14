@@ -31,17 +31,16 @@ namespace P3_Code
 
             try
             {
-                preferences.Add(UserName, new Dictionary<string, string>() ); //need to assign PreferenceName and Value
+                preferences.Add(UserName, new Dictionary<string, string>() ); 
+                //need to assign PreferenceName and Value??
           
-                return "";
+                return NO_ERROR;
             }
             catch (ArgumentException)
             {
-                return "";
+                return "Invalid Input";
             }
             
         }
-
-
     }
 }
