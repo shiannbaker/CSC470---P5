@@ -12,11 +12,11 @@ namespace P3_Code
 
         string Remove(int projectId);
 
-        string Modify(int projectId, Project project);
+        string Modify(int projectId, Project project);*/
 
         List<Project> GetAll();
 
-        bool IsDuplicateName(string projectName);*/
+        bool IsDuplicateName(string projectName);
 
     }
 }

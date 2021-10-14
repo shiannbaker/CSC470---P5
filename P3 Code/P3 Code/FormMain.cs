@@ -52,8 +52,6 @@ namespace P3_Code
                 //showing second form
                 Select select = new Select();
                 select.ShowDialog();
-
-                //if exit button hit exit completely
                 
 
 

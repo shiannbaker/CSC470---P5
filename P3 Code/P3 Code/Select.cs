@@ -12,21 +12,15 @@ namespace P3_Code
 {
     public partial class Select : Form
     {
-        bool isClicked = false;
         public Select()
         {
             InitializeComponent();
         }
 
-        bool getBool()
-        {
-            return isClicked;
-        }
         private void Select_Load(object sender, EventArgs e)
         {
-            //form chosen
-            
-
+            FakeProjectRepository project = List<Project> GetAll();
+            listBox1.Items.Add();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,6 +30,18 @@ namespace P3_Code
 
             FormMain var = (FormMain)Application.OpenForms["FormMain"];
             var.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //select project
+            //grab the name to display in MainForm
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 }
