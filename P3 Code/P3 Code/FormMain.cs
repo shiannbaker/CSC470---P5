@@ -55,16 +55,19 @@ namespace P3_Code
                 select.ShowDialog();
 
                 this.Text = "Main - " + currentProject.Name;
-
-                //this.Text = "Main - No Project Selected";
             }
         }
 
         private void selectProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //store/change selected project
+        }
 
-
+        private void createProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //create new Project
+            CreateForm create = new CreateForm();
+            create.ShowDialog();
         }
     }
 }

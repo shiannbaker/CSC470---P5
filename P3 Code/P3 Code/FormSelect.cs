@@ -23,7 +23,6 @@ namespace P3_Code
 
             this.CenterToScreen();
 
-
             // show each project in the listBox
             List<Project> projects = projectRepo.GetAll();
             foreach (Project i  in projects)
@@ -34,7 +33,6 @@ namespace P3_Code
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             //have the user try again
             //show message that they should try again
             string message = "A project must be selected.";
@@ -64,8 +62,6 @@ namespace P3_Code
             this.Close();
 
             // How can I get the project out of the list using just a project name??
-
-
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

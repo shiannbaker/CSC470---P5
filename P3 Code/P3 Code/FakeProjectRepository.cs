@@ -13,6 +13,7 @@ namespace P3_Code
         const string DUPLICATE_PROJECT_NAME_ERROR = "Duplicate Project Detected.";
         const string NO_PROJECT_FOUND_ERROR = "Project Not Found.";
         const string EMPTY_PROJECT_NAME_ERROR = "Empty Project Name.";
+        private int ID = 1;
 
         private static Dictionary<string, Project> projects;
 
@@ -22,14 +23,16 @@ namespace P3_Code
             {
                 projects = new Dictionary<string, Project>();
                 //add some
+
                 projects.Add("One", new Project
                 {
-                    Id = 1,
+                    Id = GetNextId(),
                     Name = "First Project",
                 });
+                
                 projects.Add("Two", new Project
                 {
-                    Id = 2,
+                    Id = GetNextId(),
                     Name = "Second Project",
                 });
             }
@@ -38,13 +41,30 @@ namespace P3_Code
         public int GetNextId()
         {
             //get next project id
-
-            return 0; //return id
+            return ID++;
         }
 
-        public string Add(Project project, int Id)
+        public string Add(Project project, string name) //here
         {
-            return "";
+            CreateForm var = new CreateForm();
+
+            if (name == null || name == "")
+            {
+                return EMPTY_PROJECT_NAME_ERROR;
+            }
+            else if ( projects.ContainsKey(name) )//check for duplicate name
+            {
+                return DUPLICATE_PROJECT_NAME_ERROR;
+            }
+            else
+            {
+                projects.Add(name, new Project
+                {
+                    Id = GetNextId(),
+                    Name = name,
+                });
+                return name;
+            }
         }
 
         public string Remove(int projectId)

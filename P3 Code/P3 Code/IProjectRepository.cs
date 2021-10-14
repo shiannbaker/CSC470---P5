@@ -8,7 +8,7 @@ namespace P3_Code
 {
     public interface IProjectRepository
     {
-        string Add(Project project, int Id);
+        string Add(Project project, string name);
 
         string Remove(int projectId);
 
