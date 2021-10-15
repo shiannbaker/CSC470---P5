@@ -80,7 +80,7 @@ namespace P3_Code
                 }
                 else if (senderId == 3)
                 {
-                    FormMain var = (FormMain)Application.OpenForms["FormMain"];
+                    FormModify var = (FormModify)Application.OpenForms["FormModify"];
                     var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
                     this.Close();
                 }
