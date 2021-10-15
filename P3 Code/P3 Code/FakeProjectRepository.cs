@@ -47,23 +47,24 @@ namespace P3_Code
         public string Add(Project project, string name) //here
         {
             CreateForm var = new CreateForm();
+            string result = name.Trim();
 
-            if (name == null || name == "")
+            if (result == null || result == "")
             {
                 return EMPTY_PROJECT_NAME_ERROR;
             }
-            else if ( projects.ContainsKey(name) )//check for duplicate name
+            else if ( projects.ContainsKey(result) )//check for duplicate name
             {
                 return DUPLICATE_PROJECT_NAME_ERROR;
             }
             else
             {
-                projects.Add(name, new Project
+                projects.Add(result, new Project
                 {
                     Id = GetNextId(),
-                    Name = name,
+                    Name = result,
                 });
-                return name;
+                return result;
             }
         }
 
