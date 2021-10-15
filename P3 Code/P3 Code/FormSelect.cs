@@ -38,9 +38,9 @@ namespace P3_Code
             string message = "A project must be selected.";
             string title = "Attention";
             MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
-            DialogResult result2 = MessageBox.Show(message, title, buttons);
+            DialogResult result = MessageBox.Show(message, title, buttons);
 
-            if (result2 == DialogResult.Cancel)
+            if (result == DialogResult.Cancel)
             {
                 //form cancelled
                 this.Close();
@@ -57,9 +57,27 @@ namespace P3_Code
             FormMain var = (FormMain)Application.OpenForms["FormMain"];
             List<Project> projects = projectRepo.GetAll();
 
-            var.currentProject = projects.Find(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+            if (listBox1.SelectedIndex != -1)
+            {
+                var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+                this.Close();
+            }
+            else
+            {
+                //have the user try again
+                //show message that they should try again
+                string message = "A project must be selected.";
+                string title = "Attention";
+                MessageBoxButtons buttons = MessageBoxButtons.OKCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons);
 
-            this.Close();
+                if (result == DialogResult.Cancel)
+                {
+                    //form cancelled
+                    this.Close();
+                    var.Close();
+                }
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -13,8 +13,9 @@ namespace P3_Code
         const string DUPLICATE_PROJECT_NAME_ERROR = "Duplicate Project Detected.";
         const string NO_PROJECT_FOUND_ERROR = "Project Not Found.";
         const string EMPTY_PROJECT_NAME_ERROR = "Empty Project Name.";
-        private int ID = 1;
 
+        // Because these are static, they ch
+        private static int ID = 0;
         private static List<Project> projects;
 
         public FakeProjectRepository() //unique int vals as key
@@ -26,13 +27,13 @@ namespace P3_Code
 
                 projects.Add(new Project
                 {
-                    Id = GetNextId(),
+                    Id = this.GetNextId(),
                     Name = "First Project",
                 });
                 
                 projects.Add(new Project
                 {
-                    Id = GetNextId(),
+                    Id = this.GetNextId(),
                     Name = "Second Project",
                 });
             }
@@ -41,12 +42,12 @@ namespace P3_Code
         public int GetNextId()
         {
             //get next project id
-            return ID++;
+            return ++ID;
         }
 
         public string Add(Project project, string name) //here
         {
-            CreateForm var = new CreateForm();
+            FormCreate var = new FormCreate();
 
             if (name == null || name == "")
             {
@@ -63,7 +64,7 @@ namespace P3_Code
                     Id = GetNextId(),
                     Name = name,
                 });
-                return name;
+                return NO_ERROR;
             }
         }
 

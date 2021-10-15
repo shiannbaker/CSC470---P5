@@ -70,9 +70,21 @@ namespace P3_Code
 
         private void createProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //create new Project
-            CreateForm create = new CreateForm();
+            //create new Project and pass the projectRepo so that the create dialog can add new projects
+            FormCreate create = new FormCreate();
             create.ShowDialog();
+        }
+
+        private void modifyProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormModify modifyForm = new FormModify();
+            modifyForm.ShowDialog();
+        }
+
+        private void removeProjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRemove removeForm = new FormRemove();
+            removeForm.ShowDialog();
         }
 
         // Custom function to load up the project, for now just displays the name

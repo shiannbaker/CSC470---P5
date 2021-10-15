@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P3_Code
 {
-    public partial class CreateForm : Form
+    public partial class FormCreate : Form
     {
-        public CreateForm()
+        public FormCreate()
         {
             InitializeComponent();
         }
@@ -22,25 +22,26 @@ namespace P3_Code
             this.CenterToScreen();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             FakeProjectRepository var = new FakeProjectRepository();
+
             Project _project = new Project();
             string result = var.Add(_project, textBox1.Text);
 
             if(result == "No Error.")
             {
+                MessageBox.Show("Project \"" + textBox1.Text + "\" added successfully.");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Project \"" + result + "\" added successfully.");
-                this.Close();
+                MessageBox.Show(result);
             }
         }
     }

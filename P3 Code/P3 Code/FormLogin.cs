@@ -23,7 +23,7 @@ namespace P3_Code
             Application.Exit();
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void buttonLogin_Click(object sender, EventArgs e)
         {
             string UserName = usernameBox.Text;
             string Password = passwordBox.Text;
