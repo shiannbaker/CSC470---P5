@@ -9,10 +9,10 @@ namespace P3_Code
     public class FakeProjectRepository : IProjectRepository
     {
         const string NO_ERROR = "No Error.";
-        const string MODIFIED_PROJECT_ID_ERROR = "Error Modifying Project ID.";
-        const string DUPLICATE_PROJECT_NAME_ERROR = "Duplicate Project Detected.";
-        const string NO_PROJECT_FOUND_ERROR = "Project Not Found.";
-        const string EMPTY_PROJECT_NAME_ERROR = "Empty Project Name.";
+        const string MODIFIED_PROJECT_ID_ERROR = "Can not modify the project id.";
+        const string DUPLICATE_PROJECT_NAME_ERROR = "Project name already exists.";
+        const string NO_PROJECT_FOUND_ERROR = "No project found.";
+        const string EMPTY_PROJECT_NAME_ERROR = "Project name is empty or blank.";
 
         // Because these are static, they ch
         private static int ID = 0;

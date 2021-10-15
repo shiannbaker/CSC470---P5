@@ -22,8 +22,8 @@ namespace P3_Code
         {
             this.CenterToScreen();
 
-            FormSelect form = new FormSelect();
-
+            FormSelect form = new FormSelect(2);    // 2 is code for remove
+            form.ShowDialog();
         }
 
         private void buttonRemove_Click(object sender, EventArgs e)

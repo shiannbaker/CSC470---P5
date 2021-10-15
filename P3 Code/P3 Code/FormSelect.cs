@@ -13,8 +13,10 @@ namespace P3_Code
     public partial class FormSelect : Form
     {
         public FakeProjectRepository projectRepo = new FakeProjectRepository();
-        public FormSelect()
+        private int senderId;
+        public FormSelect(int id)
         {
+            senderId = id;
             InitializeComponent();
         }
 
@@ -53,14 +55,35 @@ namespace P3_Code
         private void button1_Click(object sender, EventArgs e)
         {
             //select project
-            //grab the name to display in MainForm
-            FormMain var = (FormMain)Application.OpenForms["FormMain"];
+
             List<Project> projects = projectRepo.GetAll();
+
+            
 
             if (listBox1.SelectedIndex != -1)
             {
-                var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
-                this.Close();
+
+                // Set the correct variable from the caller forms's id
+                // 1=main, 2=remove, 3=modify
+
+                if (senderId == 1)
+                {
+                    FormMain var = (FormMain)Application.OpenForms["FormMain"];
+                    var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+                    this.Close();
+                }
+                else if (senderId == 2)
+                {
+                    FormRemove var = (FormRemove)Application.OpenForms["FormRemove"];
+                    var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+                    this.Close();
+                }
+                else if (senderId == 3)
+                {
+                    FormMain var = (FormMain)Application.OpenForms["FormMain"];
+                    var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
+                    this.Close();
+                }
             }
             else
             {
@@ -75,7 +98,8 @@ namespace P3_Code
                 {
                     //form cancelled
                     this.Close();
-                    var.Close();
+                    var mainForm = (FormMain)Application.OpenForms["FormMain"];
+                    mainForm.Close();
                 }
             }
         }

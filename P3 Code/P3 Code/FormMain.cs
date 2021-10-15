@@ -51,7 +51,7 @@ namespace P3_Code
                 //Project _project = new Project();
 
                 //showing second form
-                FormSelect select = new FormSelect();
+                FormSelect select = new FormSelect(1);
                 select.ShowDialog();
 
                 this.initProject();
@@ -61,7 +61,7 @@ namespace P3_Code
         private void selectProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //showing second form
-            FormSelect select = new FormSelect();
+            FormSelect select = new FormSelect(1);
             select.ShowDialog();
 
             this.initProject();
