@@ -49,7 +49,7 @@ namespace P3_Code
         {
             FormCreate var = new FormCreate();
 
-            if (name == null || name == "")
+            if (result == null || result == "")
             {
                 return EMPTY_PROJECT_NAME_ERROR;
             }
@@ -62,7 +62,7 @@ namespace P3_Code
                 projects.Add(new Project
                 {
                     Id = GetNextId(),
-                    Name = name,
+                    Name = result,
                 });
                 return NO_ERROR;
             }
