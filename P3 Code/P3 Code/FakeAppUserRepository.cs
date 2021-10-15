@@ -34,6 +34,15 @@ namespace P3_Code
                     EmailAddress = "paulcarson@email.com",
                     isAuthenticated = false
                 });
+                AppUsers.Add("L", new AppUser
+                {
+                    UserName = "L",
+                    Password = "1",
+                    FirstName = "L",
+                    LastName = "XXX",
+                    EmailAddress = "L@email.com",
+                    isAuthenticated = false
+                });
             }
         }
 

@@ -70,12 +70,38 @@ namespace P3_Code
 
         public string Remove(int projectId)
         {
-            return "";
+            Project b = projects.FirstOrDefault(x => x.Id == projectId);
+            if (b != default)
+            {
+                projects.Remove(b);
+                return NO_ERROR;
+            }
+            else
+            {
+                return NO_PROJECT_FOUND_ERROR;
+            }
         }
 
         public string Modify(int projectId, Project project)
         {
-            return "";
+            Project b = projects.FirstOrDefault(x => x.Id == projectId);
+            if (b != default)
+            {
+                if (b.Id == projectId)
+                {
+                    // Set the old project to the new
+                    b = project;
+                    return NO_ERROR;
+                }
+                else
+                {
+                    return MODIFIED_PROJECT_ID_ERROR;
+                }
+            }
+            else
+            {
+                return NO_PROJECT_FOUND_ERROR;
+            }
         }
 
         public List<Project> GetAll()
@@ -91,7 +117,14 @@ namespace P3_Code
 
         public bool IsDuplicateName(string projectName)
         {
-            return false;
+            if (projects.FirstOrDefault(x => x.Name.Equals(projectName)) != default)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

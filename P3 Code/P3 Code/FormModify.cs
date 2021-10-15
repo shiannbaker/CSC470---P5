@@ -25,6 +25,11 @@ namespace P3_Code
             FormSelect form = new FormSelect(3);
             form.ShowDialog();
 
+            if (form.DialogResult != DialogResult.OK)
+            {
+                this.Close();
+            }
+
             textBoxRename.Text = currentProject.Name;
         }
 

@@ -32,17 +32,22 @@ namespace P3_Code
             FakeProjectRepository var = new FakeProjectRepository();
 
             Project _project = new Project();
-            string result = var.Add(_project, textBox1.Text);
+            string result = var.Add(_project, textBox1.Text.Trim());
 
             if(result == "No Error.")
             {
-                MessageBox.Show("Project \"" + textBox1.Text + "\" added successfully.");
+                MessageBox.Show("Project \"" + textBox1.Text.Trim() + "\" added successfully.");
                 this.Close();
             }
             else
             {
                 MessageBox.Show(result);
             }
+        }
+
+        private void ProjectName_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

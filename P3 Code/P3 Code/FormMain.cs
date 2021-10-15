@@ -54,7 +54,15 @@ namespace P3_Code
                 FormSelect select = new FormSelect(1);
                 select.ShowDialog();
 
-                this.initProject();
+                if (select.DialogResult != DialogResult.OK)
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.initProject();
+                }
+
             }
         }
 

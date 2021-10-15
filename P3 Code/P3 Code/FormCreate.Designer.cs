@@ -39,7 +39,7 @@ namespace P3_Code
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(525, 180);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(107, 34);
             this.buttonAdd.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace P3_Code
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCancel.Location = new System.Drawing.Point(360, 180);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(107, 34);
             this.buttonCancel.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace P3_Code
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(241, 44);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(383, 36);
             this.textBox1.TabIndex = 2;
@@ -79,6 +79,7 @@ namespace P3_Code
             this.ProjectName.TabIndex = 3;
             this.ProjectName.Text = "Project Name:";
             this.ProjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ProjectName.Click += new System.EventHandler(this.ProjectName_Click);
             // 
             // FormCreate
             // 
@@ -89,7 +90,7 @@ namespace P3_Code
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonAdd);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCreate";
             this.Text = "Create Form";
             this.Load += new System.EventHandler(this.CreateForm_Load);

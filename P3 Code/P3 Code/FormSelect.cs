@@ -22,7 +22,6 @@ namespace P3_Code
 
         private void Select_Load(object sender, EventArgs e)
         {
-
             this.CenterToScreen();
 
             // show each project in the listBox
@@ -68,18 +67,21 @@ namespace P3_Code
 
                 if (senderId == 1)
                 {
+                    this.DialogResult = DialogResult.OK;
                     FormMain var = (FormMain)Application.OpenForms["FormMain"];
                     var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
                     this.Close();
                 }
                 else if (senderId == 2)
                 {
+                    this.DialogResult = DialogResult.OK;
                     FormRemove var = (FormRemove)Application.OpenForms["FormRemove"];
                     var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
                     this.Close();
                 }
                 else if (senderId == 3)
                 {
+                    this.DialogResult = DialogResult.OK;
                     FormModify var = (FormModify)Application.OpenForms["FormModify"];
                     var.currentProject = projects.FirstOrDefault(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
                     this.Close();
