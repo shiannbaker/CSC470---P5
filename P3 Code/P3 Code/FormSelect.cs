@@ -60,8 +60,6 @@ namespace P3_Code
             var.currentProject = projects.Find(x => x.Id == int.Parse(listBox1.SelectedItem.ToString().Split('-')[0]));
 
             this.Close();
-
-            // How can I get the project out of the list using just a project name??
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -48,19 +48,24 @@ namespace P3_Code
             }
             else
             {
-                Project _project = new Project();
+                //Project _project = new Project();
 
                 //showing second form
                 FormSelect select = new FormSelect();
                 select.ShowDialog();
 
-                this.Text = "Main - " + currentProject.Name;
+                this.initProject();
             }
         }
 
         private void selectProjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //store/change selected project
+            //showing second form
+            FormSelect select = new FormSelect();
+            select.ShowDialog();
+
+            this.initProject();
+
         }
 
         private void createProjectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,6 +73,12 @@ namespace P3_Code
             //create new Project
             CreateForm create = new CreateForm();
             create.ShowDialog();
+        }
+
+        // Custom function to load up the project, for now just displays the name
+        private void initProject()
+        {
+            this.Text = "Main - " + currentProject.Name;
         }
     }
 }

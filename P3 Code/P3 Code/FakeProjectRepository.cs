@@ -15,22 +15,22 @@ namespace P3_Code
         const string EMPTY_PROJECT_NAME_ERROR = "Empty Project Name.";
         private int ID = 1;
 
-        private static Dictionary<string, Project> projects;
+        private static List<Project> projects;
 
         public FakeProjectRepository() //unique int vals as key
         {
             if (projects == null)
             {
-                projects = new Dictionary<string, Project>();
+                projects = new List<Project>();
                 //add some
 
-                projects.Add("One", new Project
+                projects.Add(new Project
                 {
                     Id = GetNextId(),
                     Name = "First Project",
                 });
                 
-                projects.Add("Two", new Project
+                projects.Add(new Project
                 {
                     Id = GetNextId(),
                     Name = "Second Project",
@@ -52,13 +52,13 @@ namespace P3_Code
             {
                 return EMPTY_PROJECT_NAME_ERROR;
             }
-            else if ( projects.ContainsKey(name) )//check for duplicate name
+            else if ( projects.Contains(projects.Find(x => x.Name.Equals(name))) )  //check for duplicate name
             {
                 return DUPLICATE_PROJECT_NAME_ERROR;
             }
             else
             {
-                projects.Add(name, new Project
+                projects.Add(new Project
                 {
                     Id = GetNextId(),
                     Name = name,
@@ -81,9 +81,9 @@ namespace P3_Code
         {
             //return all
             List<Project> _projects = new List<Project>();
-            foreach (KeyValuePair<string, Project> project in projects)
+            foreach (Project x in projects)
             {
-                _projects.Add(project.Value);
+                _projects.Add(x);
             }
             return _projects;
         }

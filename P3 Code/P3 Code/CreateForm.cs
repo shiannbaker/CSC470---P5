@@ -39,7 +39,8 @@ namespace P3_Code
             }
             else
             {
-                MessageBox.Show(result);
+                MessageBox.Show("Project \"" + result + "\" added successfully.");
+                this.Close();
             }
         }
     }
